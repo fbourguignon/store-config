@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka-server
     port: 9091
   client:
     registerWithEureka: true
@@ -25,7 +25,7 @@ security:
 
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5432/auth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+        url: jdbc:postgresql://auth-db:5432/auth?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
         driver-class-name: org.postgresql.Driver
         username: postgres
         password: 'postgres'

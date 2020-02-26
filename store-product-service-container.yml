@@ -1,0 +1,42 @@
+server:
+  port: 9093
+
+eureka:
+  instance:
+    hostname: eureka-server
+    port: 9091
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
+
+spring:
+    datasource:
+        url: jdbc:postgresql://product-db:5433/product?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+        driver-class-name: org.postgresql.Driver
+        username: postgres
+        password: 'postgres'
+        platform: org.hibernate.dialect.PostgreSQLDialect
+
+    jpa:
+        databasePlatform: "org.hibernate.dialect.PostgreSQLDialect"
+        generate-ddl: true
+        properties:
+          hibernate:
+            show-sql: true
+            ddl-auto: update
+            temp:
+              use_jdbc_metadata_defaults: false
+            jdbc:
+              lob:
+                non_contextual_creation: true
+
+authserver:
+  hostname: http://auth-server:9092
+security:
+  oauth2:
+    resource:
+      userInfoUri: ${authserver.hostname}/user

@@ -39,4 +39,4 @@ authserver:
 security:
   oauth2:
     resource:
-      userInfoUri: ${authserver.hostname}/user
+      userInfoUri: ${authserver.hostname}/user-auth

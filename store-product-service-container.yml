@@ -15,7 +15,7 @@ eureka:
 
 spring:
     datasource:
-        url: jdbc:postgresql://product-db:5433/product?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+        url: jdbc:postgresql://product-db:5432/product?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
         driver-class-name: org.postgresql.Driver
         username: postgres
         password: 'postgres'

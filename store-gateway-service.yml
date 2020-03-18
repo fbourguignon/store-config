@@ -17,7 +17,8 @@ zuul:
   prefix: /store
   ignoredServices: '*'
   routes:
-    product:
-      path: /product/**
-      serviceId: STORE-PRODUCT-SERVICE	
+    products:
+      path: /products/**
+      serviceId: STORE-PRODUCT-SERVICE
+      strip-prefix: false	
     

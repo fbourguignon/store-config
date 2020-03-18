@@ -10,20 +10,7 @@ eureka:
     hostname: eureka-server
     port: 9091
     prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-zuul:
-  prefix: /store
-  ignoredServices: '*'
-  routes:
-    product:
-      path: /products/**
-      serviceId: store-product-service
-      strip-prefix: false
   

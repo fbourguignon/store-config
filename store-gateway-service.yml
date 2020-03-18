@@ -21,4 +21,9 @@ zuul:
       path: /products/**
       serviceId: STORE-PRODUCT-SERVICE
       strip-prefix: false	
-    
+
+products:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 15000

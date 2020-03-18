@@ -22,7 +22,7 @@ zuul:
       serviceId: STORE-PRODUCT-SERVICE
       strip-prefix: false
 
-products:
+store-product-service:
   ribbon:
     eureka:
       enabled: true

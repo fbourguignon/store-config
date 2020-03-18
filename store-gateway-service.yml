@@ -22,7 +22,7 @@ zuul:
   prefix: /store
   ignoredServices: '*'
   routes:
-    product:
+    store-product-service:
       path: /products/**
       serviceId: store-product-service
       strip-prefix: false	

@@ -18,4 +18,13 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+zuul:
+  prefix: /store
+  ignoredServices: '*'
+  routes:
+    store-product-service:
+      path: /products/**
+      serviceId: store-product-service
+      strip-prefix: false	
+
   

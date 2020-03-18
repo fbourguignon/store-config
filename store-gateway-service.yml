@@ -15,9 +15,9 @@ eureka:
 
 zuul:
   prefix: /store
-  ignored-services: *
+  ignoredServices: '*'
   routes:
     product:
       path: /product/**
-      serviceId: store-product-service
-      strip-prefix: false
+      serviceId: STORE-PRODUCT-SERVICE	
+    

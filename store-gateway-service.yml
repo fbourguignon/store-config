@@ -19,11 +19,6 @@ zuul:
   routes:
     products:
       path: /products/**
-      serviceId: STORE-PRODUCT-SERVICE
+      serviceId: store-product-service
       strip-prefix: false	
 
-store-product-service:
-  ribbon:
-    eureka:
-      enabled: true
-    ServerListRefreshInterval: 15000

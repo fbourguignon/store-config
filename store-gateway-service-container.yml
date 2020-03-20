@@ -16,6 +16,7 @@ zuul:
   ignore-security-headers: false
   routes:
     store-product-service:
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
       path: /products/**
       url: http://product-server:9093/products	
       strip-prefix: false	

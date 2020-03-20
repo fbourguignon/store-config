@@ -14,6 +14,7 @@ zuul:
   prefix: /store
   ignoredServices: '*'
   ignoreSecurityHeaders: false
+  sensitiveHeaders:
   routes:
     store-product-service:
       path: /products/**

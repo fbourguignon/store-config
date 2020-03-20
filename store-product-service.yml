@@ -40,3 +40,7 @@ security:
   oauth2:
     resource:
       userInfoUri: ${authserver.hostname}/user-auth
+
+ribbon:
+  eureka:
+    enabled: true

@@ -18,5 +18,5 @@ zuul:
   routes:
     store-product-service:
       path: /products/**
-      url: http://localhost:9093/products	
+      serviceId: store-product-service
       strip-prefix: false	

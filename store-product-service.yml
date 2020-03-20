@@ -2,17 +2,17 @@ server:
   port: 9093
 
 eureka:
-  instance:
-    hostname: localhost
-    port: 9091
   client:
-    registerWithEureka: true
-    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
+      defaultZone: http://localhost:9091/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
 
+ribbon:
+  eureka:
+    enabled: true
+    
 spring:
     datasource:
         url: jdbc:postgresql://localhost:5433/product?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
@@ -41,6 +41,3 @@ security:
     resource:
       userInfoUri: ${authserver.hostname}/user-auth
 
-ribbon:
-  eureka:
-    enabled: true

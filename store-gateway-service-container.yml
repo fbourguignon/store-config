@@ -13,7 +13,7 @@ eureka:
 zuul:
   prefix: /store
   ignoredServices: '*'
-  sensitiveHeaders: Cookie,Set-Cookie,Authorization
+  ignoreSecurityHeaders: false
   routes:
     store-product-service:
       path: /products/**

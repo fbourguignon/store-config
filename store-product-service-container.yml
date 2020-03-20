@@ -13,6 +13,10 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+ribbon:
+  eureka:
+    enabled: false
+    
 spring:
     datasource:
         url: jdbc:postgresql://product-db:5432/product?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false

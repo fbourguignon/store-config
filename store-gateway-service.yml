@@ -13,10 +13,9 @@ eureka:
 zuul:
   prefix: /store
   ignoredServices: '*'
-  ignore-security-headers: false
+  sensitiveHeaders: Cookie,Set-Cookie,Authorization
   routes:
     store-product-service:
-      sensitiveHeaders: Cookie,Set-Cookie,Authorization
       path: /products/**
       url: http://localhost:9093/products	
       strip-prefix: false	
